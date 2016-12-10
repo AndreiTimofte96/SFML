@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481411641 source:d:\probleme_c++\sfml\main.cpp
+	<iostream>
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+
