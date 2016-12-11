@@ -8,44 +8,33 @@ using namespace std;
 int main()
 {
     sf::RenderWindow window;
-    window.create(sf::VideoMode(1280, 720), "My window");
-
-
+    window.create(sf::VideoMode::getDesktopMode(), "My window");
 
     // run the program as long as the window is open
     sf::Event event;
     sf::Vector2i localPosition;
+
     sf::Texture TableTexture;
-
-
-    if (!TableTexture.loadFromFile("table.png"))
+    char path[]="cards_PNG/10_of_diamonds.png";
+    if (!TableTexture.loadFromFile(path))
         cout<<"Eroare incarcare png!"<<'\n';
-
-    //TableTexture.setSmooth(true);
 
     sf::Sprite TableSprite;
     TableSprite.setTexture(TableTexture);
-
     int centredTableSprite_x=(window.getSize().x-TableSprite.getLocalBounds().width)/2;
     int centredTableSprite_y=(window.getSize().y-TableSprite.getLocalBounds().height)/2;
     TableSprite.setPosition(centredTableSprite_x, centredTableSprite_y);
+    //TableSprite.setScale();
 
 
-    sf::Texture CardTexture_1;
+    /*sf::Texture CardTexture_1;
     if (!CardTexture_1.loadFromFile("10_of_clubs.png"))
         cout<<"Eroare incarcare png!"<<'\n';
     sf::Sprite CardSprite_1;
     CardSprite_1.setTexture(CardTexture_1);
-    CardSprite_1.scale(.11f, .11f);
-    CardSprite_1.setPosition(612, 447);
+    CardSprite_1.scale(.19f, .19f);
+    CardSprite_1.setPosition(660, 500);*/
 
-    sf::Texture CardTexture_2;
-    if (!CardTexture_2.loadFromFile("10_of_clubs.png"))
-        cout<<"Eroare incarcare png!"<<'\n';
-    sf::Sprite CardSprite_2;
-    CardSprite_2.setTexture(CardTexture_2);
-    CardSprite_2.scale(.11f, .11f);
-    CardSprite_2.setPosition(625, 447);
 
 
     cout<<window.getSize().x<<'\n';
@@ -56,8 +45,7 @@ int main()
 
     window.clear();
     window.draw(TableSprite);
-    window.draw(CardSprite_1);
-    window.draw(CardSprite_2);
+    //window.draw(CardSprite_1);
     window.display();
 
     while (window.isOpen())
