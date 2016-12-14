@@ -2,11 +2,13 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
-
 using namespace std;
 
 int main()
 {
+    /*sf::ContextSettings settings;
+    settings.antialiasingLevel = 8;
+    window.create(sf::VideoMode::getDesktopMode(), "My window", sf::Style::Default, settings);*/
     sf::RenderWindow window;
     window.create(sf::VideoMode::getDesktopMode(), "My window");
 
@@ -15,7 +17,7 @@ int main()
     sf::Vector2i localPosition;
 
     sf::Texture TableTexture;
-    char path[]="cards_PNG/10_of_diamonds.png";
+    char path[]="table3psd.png";
     if (!TableTexture.loadFromFile(path))
         cout<<"Eroare incarcare png!"<<'\n';
 
@@ -27,13 +29,13 @@ int main()
     //TableSprite.setScale();
 
 
-    /*sf::Texture CardTexture_1;
-    if (!CardTexture_1.loadFromFile("10_of_clubs.png"))
+    sf::Texture CardTexture_1;
+    if (!CardTexture_1.loadFromFile("cards_PNG/10_of_clubs.png"))
         cout<<"Eroare incarcare png!"<<'\n';
     sf::Sprite CardSprite_1;
     CardSprite_1.setTexture(CardTexture_1);
     CardSprite_1.scale(.19f, .19f);
-    CardSprite_1.setPosition(660, 500);*/
+    CardSprite_1.setPosition(660, 500);
 
 
 
@@ -45,7 +47,7 @@ int main()
 
     window.clear();
     window.draw(TableSprite);
-    //window.draw(CardSprite_1);
+    window.draw(CardSprite_1);
     window.display();
 
     while (window.isOpen())
@@ -73,6 +75,13 @@ int main()
                     window.close();
             }
 
+            if (event.type == sf::Event::GainedFocus)
+            {
+                    window.clear();
+                    window.draw(TableSprite);
+                    window.draw(CardSprite_1);
+                    window.display();
+            }
         }
     }
     return 0;
