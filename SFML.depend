@@ -1,13 +1,23 @@
 # depslib dependency file v1.0
-1481720487 source:d:\probleme_c++\sfml\main.cpp
-	<iostream>
-	<SFML/Window.hpp>
-	<SFML/Graphics.hpp>
+1481911850 source:d:\probleme_c++\sfml\main.cpp
+	"window.h"
 
-1481720853 source:d:\probleme_c++\sfml\draw.cpp
+1481913336 source:d:\probleme_c++\sfml\draw.cpp
 	"draw.h"
 
-1481720866 d:\probleme_c++\sfml\draw.h
+1481913336 d:\probleme_c++\sfml\draw.h
 	<SFML/Window.hpp>
 	<SFML/Graphics.hpp>
+	<SFML/System/Vector2.hpp>
+	<cstring>
+	<iostream>
+
+1481912237 d:\probleme_c++\sfml\window.h
+	"draw.h"
+	<fstream>
+	<time.h>
+
+1481912538 source:d:\probleme_c++\sfml\window.cpp
+	"window.h"
+	<sstream>
 

@@ -33,7 +33,11 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="cards.txt" />
+		<Unit filename="draw.cpp" />
+		<Unit filename="draw.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="window.cpp" />
+		<Unit filename="window.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
