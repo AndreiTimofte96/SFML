@@ -2,7 +2,7 @@
 1481911850 source:d:\probleme_c++\sfml\main.cpp
 	"window.h"
 
-1481913336 source:d:\probleme_c++\sfml\draw.cpp
+1481913451 source:d:\probleme_c++\sfml\draw.cpp
 	"draw.h"
 
 1481913336 d:\probleme_c++\sfml\draw.h
@@ -17,7 +17,7 @@
 	<fstream>
 	<time.h>
 
-1481912538 source:d:\probleme_c++\sfml\window.cpp
+1481913450 source:d:\probleme_c++\sfml\window.cpp
 	"window.h"
 	<sstream>
 

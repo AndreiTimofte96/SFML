@@ -17,7 +17,7 @@ Window::show_cards() ///DEZORDINE TOTALA
     ifstream fin("cards.txt");
 
     ///desenez masa de joc
-    strcpy(path1, "table3ps.png");
+    strcpy(path1, "Photos/table3ps.png");
     table.draw_table(window, path1);
 
     fin>>number_of_cards;
